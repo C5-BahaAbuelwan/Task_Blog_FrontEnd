@@ -1,0 +1,331 @@
+/* #comments{
+    background-color: lightblue;
+    width: 100%;
+    height: 50px;
+    overflow-y: scroll;
+} */
+
+.postsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Demo Code: */
+body {
+  font-family: "Open Sans", arial, sans-serif;
+  color: #333;
+  font-size: 14px;
+}
+.projcard-container {
+  margin: 50px 0;
+}
+
+/* Actual Code: */
+.projcard-container,
+.projcard-container * {
+  box-sizing: border-box;
+}
+.projcard-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}
+.projcard {
+  
+  margin-left:3vw;
+  margin-right: 3vw;
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #ddd;
+  /* font-size: 18px; */
+  overflow: hidden;
+  /* cursor: pointer; */
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.projcard:hover {
+  box-shadow: 0 34px 32px -33px rgba(0, 0, 0, 0.18);
+  transform: translate(0px, -3px);
+}
+.projcard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(-70deg, #424242, transparent 50%);
+  opacity: 0.07;
+}
+.projcard:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #424242, transparent 50%);
+}
+.projcard-innerbox {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+  color: black;
+  font-size: 1rem;
+  padding: 3%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.comment {
+    padding-left: 5px;
+    border: solid 0.5px rgba(128, 128, 128, 0.37) ;
+    overflow-y: scroll;
+    height: 12vh;
+    font-size: 0.83rem;
+}
+
+.comments h5{
+  color: #21a567 ;
+}
+.comments {
+  padding: 1%;
+  height: 60vh;
+  width: 28rem;
+  top: 0;
+  right: 0;
+    overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+    left: initial;
+    right: 0;
+    overflow-y: scroll;
+}
+
+.projcard:nth-child(2n) .comments {
+    position: absolute;
+
+  left: initial;
+  right: 0;
+  overflow-y: scroll;
+}
+
+.projcard-img {
+  position: absolute;
+  height: 300px;
+  width: 350px;
+  top: 0;
+  left: 0;
+  /* transition: transform 0.2s ease;  */
+}
+.projcard:nth-child(2n) .projcard-img {
+  left: initial;
+  right: 0;
+}
+.projcard:hover .projcard-img {
+  transform: scale(1.05) rotate(1deg);
+}
+.projcard:hover .projcard-bar {
+  width: 70px;
+}
+.projcard-textbox {
+  /* position: absolute; */
+  top: 7%;
+  bottom: 7%;
+  left: 430px;
+  width: calc(100% - 470px);
+  font-size: 17px;
+  
+}
+.projcard:nth-child(2n) .projcard-textbox {
+    
+  left: initial;
+  right: 430px;
+}
+.projcard-textbox::before,
+.projcard-textbox::after {
+    
+  content: "";
+  position: absolute;
+  display: block;
+  background: #ff0000bb;
+  background: #90ee9050;
+  top: -20%;
+  left: -55px;
+  height: 140%;
+  width: 60px;
+  transform: rotate(8deg);
+}
+.projcard:nth-child(2n) .projcard-textbox::before {
+  display: none;
+}
+.projcard-textbox::after {
+  display: none;
+  left: initial;
+  right: -55px;
+}
+.projcard:nth-child(2n) .projcard-textbox::after {
+  display: block;
+}
+.projcard-textbox * {
+  position: relative;
+}
+.projcard-title {
+  font-family: "Voces", "Open Sans", arial, sans-serif;
+  font-size: 24px;
+}
+.projcard-subtitle {
+  font-family: "Voces", "Open Sans", arial, sans-serif;
+  
+  color: #888;
+}
+.projcard-bar {
+  left: -2px;
+  width: 50px;
+  height: 5px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #424242;
+  transition: width 0.2s ease;
+}
+.projcard-blue .projcard-bar {
+  background-color: #21a567 ;
+}
+.projcard-blue::before {
+  background-image: linear-gradient(-70deg, #0088ff, transparent 50%);
+}
+.projcard-blue:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #0088ff, transparent 50%);
+}
+.projcard-description {
+  z-index: 10;
+  /* font-size: 15px; */
+  color: #424242;
+  height: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.projcard-tagbox {
+  position: absolute;
+  bottom: 3%;
+  font-size: 14px;
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+}
+.projcard-tag {
+  display: inline-block;
+  background: #e0e0e0;
+  color: #777;
+  border-radius: 3px 0 0 3px;
+  line-height: 26px;
+  padding: 0 10px 0 23px;
+  position: relative;
+  margin-right: 20px;
+  cursor: default;
+  user-select: none;
+  transition: color 0.2s;
+}
+.projcard-tag::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  height: 6px;
+  left: 10px;
+  width: 6px;
+  top: 10px;
+}
+.projcard-tag::after {
+  content: "";
+  position: absolute;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #e0e0e0;
+  border-top: 13px solid transparent;
+  right: -10px;
+  top: 0;
+}
+.buttonss {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.buttonss:nth-child(2n) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    
+  }
+
+
+
+.buttonss button {
+  margin-top: 7%;
+  background-color: #21a567 ;
+  width: 10vw;
+  height: 5vh;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#addPostsButton{
+    border: solid 0.5px #21a567 ;
+    margin-left: 3vw;
+}
+#addPostsButton:hover{
+  background-color: #21a567 ;
+}
+
+.noLogin{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2vh;
+}
+.LoginTitle{
+  color: white;
+}
+.noLogin a{
+  color: wheat;
+
+}
+
+@media screen and (max-width: 600px) {
+  
+.comments{
+  width: 40%;
+}
+.addPostsButton{
+  display: flex;
+
+}
+.projcard-textbox{
+  height: 100%;
+}
+.projcard-title{
+  font-size: 0.6rem;
+}
+.projcard-description{
+  /* width: 40%; */
+  font-size: 0.5rem;
+  z-index: 10;
+  /* font-size: 15px; */
+  color: #424242;
+  height: 40px;
+  overflow: inherit;
+  text-overflow: clip;
+}
+}

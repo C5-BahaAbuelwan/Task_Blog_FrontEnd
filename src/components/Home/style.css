@@ -1,0 +1,22 @@
+.Home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    row-gap: 10px;
+    color: white;
+}
+.Home a{
+    color: wheat;
+}
+
+/* .imageHome{
+    border-radius: 20px;
+    box-shadow: rgba(255, 255, 255, 0.452) 0px 50px 100px -20px, rgba(115, 240, 91, 0.479) 0px 30px 60px -30px;
+    margin-top: 1%;
+   margin-bottom: 10%;
+} */
+
+.Home img{
+    width: 100%;
+}

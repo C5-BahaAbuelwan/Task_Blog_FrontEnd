@@ -1,0 +1,19 @@
+.deleteButtons{
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.modal-footer{
+    align-items: center;
+    justify-content: space-evenly;
+}
