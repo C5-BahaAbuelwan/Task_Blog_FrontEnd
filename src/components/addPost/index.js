@@ -54,28 +54,23 @@ function AddPost(props) {
           <Modal.Title>Modal</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h5 className="Title">Title </h5>
-          <input
-            onChange={(e) => {
+         <div>
+  <div action="/action_page.php">
+    <label for="fname">Title</label>
+    <input onChange={(e) => {
               setTitle(e.target.value);
-            }}
-            placeholder="title"
-          />
-          <h5 className="Body">Body </h5>
-          <textarea
-            placeholder="Body"
-            onChange={(e) => {
+            }} type="text" id="fname" name="firstname" placeholder="Your name.."/>
+
+    <label for="lname">Body</label>
+    <textarea onChange={(e) => {
               setBody(e.target.value);
-            }}
-          />
-          <br />
-          <button
-            onClick={() => {
+            }} type="text" id="lname" name="lastname" placeholder="Your last name.."/>
+  
+    <input   onClick={() => {
               handelAdd();
-            }}
-          >
-            submit
-          </button>
+            }} type="submit" value="Submit"/>
+  </div>
+</div>
         </Modal.Body>
       </Modal>
     </>
