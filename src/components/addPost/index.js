@@ -51,7 +51,7 @@ function AddPost(props) {
       ))}
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal</Modal.Title>
+          <Modal.Title>Add Post</Modal.Title>
         </Modal.Header>
         <Modal.Body>
          <div>

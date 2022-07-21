@@ -24,8 +24,8 @@ body{
 }
 .shape:first-child{
     background: linear-gradient(
-        #1845ad,
-        #23a2f6
+        #00d652,
+        #00ff4c
     );
     left: -80px;
     top: -80px;
@@ -33,8 +33,8 @@ body{
 .shape:last-child{
     background: linear-gradient(
         to right,
-        #ff512f,
-        #f09819
+        rgb(75, 173, 75),
+        green
     );
     right: -30px;
     bottom: -80px;
