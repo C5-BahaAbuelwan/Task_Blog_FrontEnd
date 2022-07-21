@@ -95,7 +95,7 @@ const Posts = () => {
             <div class="projcard-textbox">
               <div class="projcard-title">{element.title}</div>
 
-              <div class="projcard-subtitle">Name uther</div>
+              
               <div class="projcard-bar"></div>
               <div class="projcard-description">{element.body}</div>
 
@@ -115,53 +115,7 @@ const Posts = () => {
 </div></>):(<div className="noLogin"><h5 className="LoginTitle">Please <a href="/login" >Login</a> to see our users Posts</h5>
 <img src={svgFile}/>
 </div>)}
-      {/* <AddPost />
-
-      <div className="postsContainer">
-        {posts &&
-          posts.map((element, index) => {
-            return (
-              <div class="projcard projcard-blue">
-                <div class="projcard-innerbox">
-                  <div className="comments">
-                    <h5>Comments</h5>
-                  {comments &&
-                    comments.map((element1, index) => {
-                      return element1.postId === element.id ? (
-                        
-                          <p className="comment">{element1.body}</p>
-                        
-                      ) : (
-                        <></>
-                      );
-                    })}
-
-                  </div>
-                  
-
-                 
-                  
-                  <div class="projcard-textbox">
-                    <div class="projcard-title">{element.title}</div>
-
-                    <div class="projcard-subtitle">Name uther</div>
-                    <div class="projcard-bar"></div>
-                    <div class="projcard-description">{element.body}</div>
-
-                    {id == element.userId ? (
-                      <div className="buttonss">
-                        <EditPost id={element.id} className="edits" />
-                        <DeletePop id={element.id} />
-                      </div>
-                    ) : (
-                      <></>
-                    )}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-      </div> */}
+     
     </div>
   );
 };
