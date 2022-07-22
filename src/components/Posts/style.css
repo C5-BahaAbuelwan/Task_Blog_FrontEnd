@@ -295,9 +295,9 @@ body {
   color: wheat;
 
 }
-/* .mb-2{
-  margin-bottom: -0.5rem !important;
-} */
+.mb-2{
+  margin-bottom: 1rem !important;
+}
 
 @media screen and (max-width: 600px) {
   
