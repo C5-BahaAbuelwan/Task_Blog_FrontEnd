@@ -122,8 +122,8 @@ const UserInfo = () => {
                 {" "}
                 <p id="nameInfo">
                   {info.name}{" "}
-                  <Button id="editButton"
-                  
+                  <Button
+                    id="editButton"
                     className="editButton"
                     onClick={() => {
                       handelOnClick();
@@ -131,16 +131,8 @@ const UserInfo = () => {
                     }}
                     variant="success"
                   >
-                    <AiFillEdit/>
+                    <AiFillEdit />
                   </Button>{" "}
-                  {/* <button
-                  onClick={() => {
-                    handelOnClick();
-                    setId(1);
-                  }}
-                >
-                  edit
-                </button> */}
                 </p>{" "}
               </>
             )}
@@ -186,7 +178,6 @@ const UserInfo = () => {
                   >
                     <AiFillEdit />
                   </Button>{" "}
-                  
                 </p>{" "}
               </>
             )}
@@ -230,9 +221,8 @@ const UserInfo = () => {
                     }}
                     variant="success"
                   >
-                    <AiFillEdit/>
+                    <AiFillEdit />
                   </Button>{" "}
-                  
                 </p>{" "}
               </>
             )}
@@ -276,9 +266,8 @@ const UserInfo = () => {
                     }}
                     variant="success"
                   >
-                    <AiFillEdit/>
+                    <AiFillEdit />
                   </Button>{" "}
-                  
                 </p>{" "}
               </>
             )}
@@ -322,21 +311,16 @@ const UserInfo = () => {
                     }}
                     variant="success"
                   >
-                    <AiFillEdit/>
+                    <AiFillEdit />
                   </Button>{" "}
-                 
                 </p>{" "}
               </>
             )}
           </div>
         </div>
-
-       
       </div>
     </div>
   );
-
-
 };
 
 export default UserInfo;

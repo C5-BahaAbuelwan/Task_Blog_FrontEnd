@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import { addPostsAction, posts } from "../../redux/reducer/post";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -78,6 +77,4 @@ function AddPost(props) {
 }
 
 export default AddPost;
-{
-  /* render(<Example />); */
-}
+

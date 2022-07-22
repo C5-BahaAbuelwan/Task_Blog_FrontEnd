@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import {
   updatePostsAction,
   posts,
@@ -9,7 +8,7 @@ import {
 } from "../../redux/reducer/post";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import "./style.css"
+import "./style.css";
 function EditPost(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -29,11 +28,14 @@ function EditPost(props) {
       posts: state.posts.posts,
     };
   });
-  let posted=posts
+  let posted = posts;
 
   const handelEdit = () => {
     dispatch(
-      updatePostsAction({id:props.id,newPosts:{title:title,id:props.id,body:body,userId:id}})
+      updatePostsAction({
+        id: props.id,
+        newPosts: { title: title, id: props.id, body: body, userId: id },
+      })
     );
     setShow(false);
   };
@@ -41,7 +43,7 @@ function EditPost(props) {
   const updates = () => {
     posted.map((element, index) => {
       if (element.id === props.id) {
-        console.log( posted[index].title);
+        console.log(posted[index].title);
         posted[index].title = "title";
         posted[index].body = "body";
       }
@@ -52,7 +54,12 @@ function EditPost(props) {
   return (
     <>
       {values.map((v, idx) => (
-        <Button  variant="warning" key={idx} className="me-2 mb-2" onClick={() => handleShow(v)}>
+        <Button
+          variant="warning"
+          key={idx}
+          className="me-2 mb-2"
+          onClick={() => handleShow(v)}
+        >
           Edit
         </Button>
       ))}
@@ -61,79 +68,39 @@ function EditPost(props) {
           <Modal.Title>Edit Post</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <div>
+            <div action="/action_page.php">
+              <label for="fname">Title</label>
+              <input
+                onChange={(e) => {
+                  setTitle(e.target.value);
+                }}
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your name.."
+              />
 
-<div>
-  <div action="/action_page.php">
-    <label for="fname">Title</label>
-    <input onChange={(e) => {
-              setTitle(e.target.value);
-            }} type="text" id="fname" name="firstname" placeholder="Your name.."/>
+              <label for="lname">Body</label>
+              <textarea
+                onChange={(e) => {
+                  setBody(e.target.value);
+                }}
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Your last name.."
+              />
 
-    <label for="lname">Body</label>
-    <textarea onChange={(e) => {
-              setBody(e.target.value);
-            }} type="text" id="lname" name="lastname" placeholder="Your last name.."/>
-  
-    <input   onClick={() => {
-              handelEdit();
-            }} type="submit" value="Submit"/>
-  </div>
-</div>
-
-
-
-
-
-          {/* <h5 className="Title">Title </h5>
-          <input
-            onChange={(e) => {
-              setTitle(e.target.value);
-            }}
-            placeholder="title"
-          />
-          <h5 className="Body">Body </h5>
-          <textarea
-            placeholder="Body"
-            onChange={(e) => {
-              setBody(e.target.value);
-            }}
-          />
-          <br />
-          <button
-            onClick={() => {
-              handelEdit();
-            }}
-          >
-            submit
-          </button> */}
-
-          {/* <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Title</Form.Label><br/>
-            <input onChange={(e)=>{
-                setBody(e.target.value)
-              }} placeholder="title"/>
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-              placeholder="Post Body"
-            >
-              <Form.Label>Post Body</Form.Label> <br/>
-             <input placeholder="Body" onChange={(e)=>{
-                setBody(e.target.value)
-              }} />
-             
-            </Form.Group>
-            <button onClick={()=>{
-                handelAdd()
-            }} >submit</button> */}
-          {/* <Button onClick={()=>{
-                handelAdd()
-            }} variant="primary" type="submit">
-              Submit
-            </Button> */}
-          {/* </Form> */}
+              <input
+                onClick={() => {
+                  handelEdit();
+                }}
+                type="submit"
+                value="Submit"
+              />
+            </div>
+          </div>
         </Modal.Body>
       </Modal>
     </>
@@ -141,6 +108,3 @@ function EditPost(props) {
 }
 
 export default EditPost;
-{
-  /* render(<Example />); */
-}

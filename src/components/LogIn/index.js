@@ -72,41 +72,6 @@ function Login() {
         {message === "" ? <></> : <label for="username">{message}</label>}
         <button onClick={handelLogin}>Log In</button>
       </div>
-
-      {/* 
-      
-      <div className="loginhedar">
-        <h1 className="header"> Account Login </h1>
-        <h2>Welcome To Our Blog </h2>
-      </div>
-      <div className="login_element">
-        <input
-          type="email"
-          className="email "
-          placeholder="Email"
-          onChange={(e) => {
-            setEmailInput(e.target.value);
-          }}
-        />
-        <br />
-        <input
-          type="text"
-          className="text "
-          placeholder="User Name"
-          onChange={(e) => {
-            setUserName(e.target.value);
-          }}
-        />
-        <br />
-        <p className={isLoggedIn ? "successful" : "error"}>{message}</p>
-        <div className="button">
-          <button className="login_button" onClick={handelLogin}>
-            Login
-          </button>
-        </div>
-      </div>
-    </div>
- */}
     </div>
   );
 }

@@ -7,15 +7,10 @@
     color: white;
 }
 .Home a{
-    color: wheat;
+    color: #21a567 !important;
 }
 
-/* .imageHome{
-    border-radius: 20px;
-    box-shadow: rgba(255, 255, 255, 0.452) 0px 50px 100px -20px, rgba(115, 240, 91, 0.479) 0px 30px 60px -30px;
-    margin-top: 1%;
-   margin-bottom: 10%;
-} */
+
 
 .Home img{
     width: 100%;

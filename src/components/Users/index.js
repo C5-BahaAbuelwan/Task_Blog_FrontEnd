@@ -93,19 +93,7 @@ const Users = () => {
           </div>
             
             
-            
-            /* 
-            <Card className="card"style={{ width: "18rem" ,background:"rgba(255, 255, 255, 0.8)",border:" 1px solid rgba(121,20,87,0.4)",backdropFilter:"blur(10px)",WebkitBackdropFilter:"blur(10px)" }}>
-              <Card.Body>
-                <Card.Title>{element.name}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  Total Albums ={albums.length}
-                </Card.Subtitle>
-                <Card.Text>Total Posts ={posts.length}</Card.Text>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
-              </Card.Body>
-            </Card> */
+           
 
            
           );

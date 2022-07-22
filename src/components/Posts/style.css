@@ -1,9 +1,4 @@
-/* #comments{
-    background-color: lightblue;
-    width: 100%;
-    height: 50px;
-    overflow-y: scroll;
-} */
+
 
 .postsContainer {
   display: flex;
@@ -12,7 +7,6 @@
   flex-wrap: wrap;
 }
 
-/* Demo Code: */
 body {
   font-family: "Open Sans", arial, sans-serif;
   color: #333;
@@ -22,7 +16,6 @@ body {
   margin: 50px 0;
 }
 
-/* Actual Code: */
 .projcard-container,
 .projcard-container * {
   box-sizing: border-box;
@@ -302,6 +295,9 @@ body {
   color: wheat;
 
 }
+.mb-2{
+  margin-bottom: 0px !important;
+}
 
 @media screen and (max-width: 600px) {
   
@@ -319,10 +315,8 @@ body {
   font-size: 0.6rem;
 }
 .projcard-description{
-  /* width: 40%; */
   font-size: 0.5rem;
   z-index: 10;
-  /* font-size: 15px; */
   color: #424242;
   height: 40px;
   overflow: inherit;

@@ -1,14 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Card from "react-bootstrap/Card";
 import { useDispatch, useSelector } from "react-redux";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
+
 import AddPost from "../addPost";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
+
 import DeletePop from "../deletePopUp";
 import { setPostsAction } from "../../redux/reducer/post";
 import EditPost from "../editPost";
@@ -20,8 +15,6 @@ const Posts = () => {
   const [post, setPost] = useState([]);
   const [comments, setComments] = useState([]);
   const [edit, setEdit] = useState(false);
-  const [addPost, setAddPost] = useState(false);
-  const [deleteModel, setDeleteModel] = useState(false);
 
   const { id, posts,isLoggedIn } = useSelector((state) => {
     return {
@@ -44,7 +37,6 @@ const Posts = () => {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((result) => {
-        // console.log(result.data);
         setPost(result.data);
         dispatch(setPostsAction(result.data));
       })
